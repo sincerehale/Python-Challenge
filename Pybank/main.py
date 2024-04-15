@@ -36,4 +36,13 @@ with open(Data) as csv_file:
             Net_Change.append(Net_Change_list[i]-(Net_Change_list[i-1]))
 
 
+#Calculate Average Change
+Average_Change = sum(Net_Change)/len(Net_Change)
 
+#Greatest Profit/Loss in Net Change
+Greatest_Profit = max(Net_Change)
+Greatest_Loss = min(Net_Change)
+
+#Find the month associted with Greatest Profit/Loss
+index1 = Net_Change.index(Greatest_Profit)
+index2 = Net_Change.index
