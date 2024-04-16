@@ -45,4 +45,20 @@ Greatest_Loss = min(Net_Change)
 
 #Find the month associted with Greatest Profit/Loss
 index1 = Net_Change.index(Greatest_Profit)
-index2 = Net_Change.index
+index2 = Net_Change.index(Greatest_Loss)
+
+#Code to Print and Export Output
+Output = (
+"Financial Analysis\n"
+"---------------------\n"
+f"Total Months: {Total_Months}\n"
+f"Change over Period: {Total_Net}\n"
+f"Average CHange: {Average_Change:.2f}\n"
+f"Greatest increase in profit: {Month_Change_list[index1 +1]} : {Greatest_Profit}\n"
+f"Greatest decrease in profit: {Month_Change_list[index2 +1]} : {Greatest_Loss}")
+
+print(Output)
+
+#Converting to Text File
+with open(Analysis_output, "w") as txt_file:
+    txt_file.write(Output)
