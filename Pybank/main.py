@@ -3,7 +3,7 @@
 import os
 import csv
 
-Data = os.path.join("Resources", "budget_data.csv")
+Data = os.path.join('Resources/', "budget_data.csv")
 Analysis_output = os.path.join("Analysis", "Analysis_output.txt")
 Total_Months = 0
 Total_Net = 0
